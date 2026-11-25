@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davila's Donuts | Enlaces Oficiales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      color: #3b1d14;
+      background-color: #2b150e;
+      position: relative;
+    }
+
+    /* Fondo con imagen difuminada */
+    .bg-image {
+      position: fixed;
+      inset: 0;
+      /* AQUÍ PUEDES CAMBIAR LA FOTO DE FONDO */
+      background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: blur(4px) brightness(0.75);
+      transform: scale(1.05);
+      z-index: -1;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 460px;
+      padding: 36px 20px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Logo circular */
+    .logo-wrap {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: #fff8f0;
+      border: 3px solid #f4ece1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      margin-bottom: 4px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-title {
+      color: #fff8f0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      margin-bottom: 8px;
+    }
+
+    /* Tarjetas estilo captura */
+    .card {
+      width: 100%;
+      background: rgba(244, 236, 225, 0.96);
+      border-radius: 16px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: #3b1d14;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .card:hover, .card:active {
+      transform: scale(0.985);
+      background: #ffffff;
+    }
+
+    .card-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    /* Tarjetas de solo texto centrado */
+    .card-center {
+      justify-content: center;
+      text-align: center;
+      padding: 20px 16px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .card-sub {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: none;
+      opacity: 0.85;
+    }
+
+    /* Botón destacado de WhatsApp */
+    .card-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+
+    .card-whatsapp:hover, .card-whatsapp:active {
+      background: #20bd5a;
+    }
+
+    /* Firma discreta */
+    .footer {
+      margin-top: 18px;
+      font-size: 0.75rem;
+      color: rgba(255, 248, 240, 0.8);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .footer span {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-image"></div>
+
+  <main class="container">
+    <!-- LOGO DEL NEGOCIO (Reemplaza el src por logo.jpg cuando subas su logo) -->
+    <div class="logo-wrap">
+      <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=300&q=80" alt="Davila's Donuts Logo">
+    </div>
+    <h1 class="brand-title">Davila's Donuts</h1>
+
+    <!-- TARJETA 1: MENÚ DONUTS -->
+    <a class="card" href="https://wa.me/593999999999?text=Hola%20Davila's%20Donuts%2C%20quisiera%20ver%20el%20men%C3%BA%20de%20donas" target="_blank">
+      <img class="card-thumb" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=200&q=80" alt="Menú Donas">
+      <span class="card-text">MENÚ DE DONAS</span>
+    </a>
+
+    <!-- TARJETA 2: COMBOS Y CAJAS -->
+    <a class="card" href="https://wa.me/593999999999?text=Hola%2C%20quisiera%20consultar%20los%20combos%20y%20cajas%20disponibles" target="_blank">
+      <img class="card-thumb" src="https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?auto=format&fit=crop&w=200&q=80" alt="Combos y Cajas">
+      <span class="card-text">COMBOS Y CAJAS</span>
+    </a>
+
+    <!-- TARJETA 3: PEDIDOS PARA EVENTOS -->
+    <a class="card" href="https://wa.me/593999999999?text=Hola%2C%20quisiera%20cotizar%20un%20pedido%20para%20evento" target="_blank">
+      <img class="card-thumb" src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?auto=format&fit=crop&w=200&q=80" alt="Pedidos Especiales">
+      <span class="card-text">PEDIDOS ESPECIALES 🍩</span>
+    </a>
+
+    <!-- TARJETA 4: HORARIOS Y ENTREGAS -->
+    <div class="card card-center">
+      <span class="card-text">HORARIOS Y ENVÍOS</span>
+      <span class="card-sub">Pedidos directos y entregas a domicilio</span>
+    </div>
+
+    <!-- BOTÓN PRINCIPAL DE WHATSAPP -->
+    <a class="card card-center card-whatsapp" href="https://wa.me/593999999999?text=Hola%20Davila's%20Donuts%2C%20quiero%20hacer%20un%20pedido" target="_blank">
+      <span class="card-text">CHATEA CON NOSOTROS</span>
+    </a>
+
+    <!-- TU FIRMA -->
+    <a class="footer" href="https://www.instagram.com/" target="_blank">
+      Desarrollado por <span>EM Studio</span>
+    </a>
+  </main>
+</body>
+</html>
