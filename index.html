@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davila's Donuts | Enlaces Oficiales</title>
+  <title>Davila's Donuts | Contacto Oficial</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+  
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,47 +20,48 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
+      align-items: center; /* Centrar verticalmente el contenedor */
       color: #3b1d14;
-      background-color: #2b150e;
+      background-color: #2b150e; /* Fondo oscuro base */
       position: relative;
+      padding: 20px;
     }
 
-    /* Fondo con imagen difuminada */
+    /* Fondo con imagen difuminada (SOLO IMAGEN, SIN TEXTURAS EXTRA) */
     .bg-image {
       position: fixed;
       inset: 0;
-      /* AQUÍ PUEDES CAMBIAR LA FOTO DE FONDO */
       background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80');
       background-size: cover;
       background-position: center;
-      filter: blur(4px) brightness(0.75);
-      transform: scale(1.05);
+      filter: blur(6px) brightness(0.65); /* Más difuminado y oscuro para mejor contraste */
+      transform: scale(1.15);
       z-index: -1;
     }
 
     .container {
       width: 100%;
-      max-width: 460px;
+      max-width: 420px; /* Contenedor un poco más estrecho */
       padding: 36px 20px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 18px; /* Separación general entre elementos */
     }
 
     /* Logo circular */
     .logo-wrap {
-      width: 104px;
-      height: 104px;
+      width: 130px; /* Un poco más grande */
+      height: 130px;
       border-radius: 50%;
-      background: #fff8f0;
-      border: 3px solid #f4ece1;
+      background: #ffffff;
+      border: 4px solid #f4ece1;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-      margin-bottom: 4px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      margin-bottom: 10px;
     }
 
     .logo-wrap img {
@@ -70,65 +72,70 @@
 
     .brand-title {
       color: #fff8f0;
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-      margin-bottom: 8px;
+      font-size: 1.8rem; /* Título más grande y elegante */
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
     }
 
-    /* Tarjetas estilo captura */
+    /* BLOQUE DE HORARIO INTEGRADO */
+    .schedule-block {
+      width: 100%;
+      color: #f4ece1; /* Color claro para el texto */
+      text-align: center;
+      padding: 15px 10px;
+      border-top: 1px solid rgba(244, 236, 225, 0.3);
+      border-bottom: 1px solid rgba(244, 236, 225, 0.3);
+      margin-bottom: 10px;
+    }
+
+    .schedule-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .schedule-hours, .schedule-location {
+      font-size: 0.9rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    /* Tarjetas de acción (Botones limpios) */
     .card {
       width: 100%;
-      background: rgba(244, 236, 225, 0.96);
+      background: rgba(244, 236, 225, 0.60);
       border-radius: 16px;
-      padding: 12px 16px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       gap: 16px;
       text-decoration: none;
       color: #3b1d14;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
       transition: transform 0.15s ease, background 0.15s ease;
     }
 
     .card:hover, .card:active {
-      transform: scale(0.985);
+      transform: scale(0.99);
       background: #ffffff;
     }
 
     .card-thumb {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      object-fit: cover;
+      width: 36px; /* Iconos más pequeños y limpios */
+      height: 36px;
       flex-shrink: 0;
     }
 
     .card-text {
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Tarjetas de solo texto centrado */
-    .card-center {
-      justify-content: center;
-      text-align: center;
-      padding: 20px 16px;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .card-sub {
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-transform: none;
-      opacity: 0.85;
-    }
-
-    /* Botón destacado de WhatsApp */
+    /* Botón principal de WhatsApp */
     .card-whatsapp {
       background: #25D366;
       color: #ffffff;
@@ -138,11 +145,32 @@
       background: #20bd5a;
     }
 
+    .whatsapp-icon {
+       width: 413-px;
+       height: 40px;
+    }
+
+    /* Contenedor para redes sociales y ubicación (Grid de 2 columnas) */
+    .social-location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .card-social, .card-location {
+      justify-content: center;
+      padding: 16px 10px;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+
     /* Firma discreta */
     .footer {
-      margin-top: 18px;
-      font-size: 0.75rem;
-      color: rgba(255, 248, 240, 0.8);
+      margin-top: 28px;
+      font-size: 0.65rem;
+      color: rgba(255, 248, 240, 0.7);
       text-decoration: none;
       letter-spacing: 0.3px;
     }
@@ -157,44 +185,45 @@
   <div class="bg-image"></div>
 
   <main class="container">
-    <!-- LOGO DEL NEGOCIO (Reemplaza el src por logo.jpg cuando subas su logo) -->
+    <!-- LOGO DEL NEGOCIO -->
     <div class="logo-wrap">
-      <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=300&q=80" alt="Davila's Donuts Logo">
+      <img src="image_0.png" alt="Davila's Donuts Logo"> <!-- Usando el logo original de la captura -->
     </div>
     <h1 class="brand-title">Davila's Donuts</h1>
 
-    <!-- TARJETA 1: MENÚ DONUTS -->
-    <a class="card" href="https://wa.me/593999999999?text=Hola%20Davila's%20Donuts%2C%20quisiera%20ver%20el%20men%C3%BA%20de%20donas" target="_blank">
-      <img class="card-thumb" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=200&q=80" alt="Menú Donas">
-      <span class="card-text">MENÚ DE DONAS</span>
-    </a>
-
-    <!-- TARJETA 2: COMBOS Y CAJAS -->
-    <a class="card" href="https://wa.me/593999999999?text=Hola%2C%20quisiera%20consultar%20los%20combos%20y%20cajas%20disponibles" target="_blank">
-      <img class="card-thumb" src="https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?auto=format&fit=crop&w=200&q=80" alt="Combos y Cajas">
-      <span class="card-text">COMBOS Y CAJAS</span>
-    </a>
-
-    <!-- TARJETA 3: PEDIDOS PARA EVENTOS -->
-    <a class="card" href="https://wa.me/593999999999?text=Hola%2C%20quisiera%20cotizar%20un%20pedido%20para%20evento" target="_blank">
-      <img class="card-thumb" src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?auto=format&fit=crop&w=200&q=80" alt="Pedidos Especiales">
-      <span class="card-text">PEDIDOS ESPECIALES 🍩</span>
-    </a>
-
-    <!-- TARJETA 4: HORARIOS Y ENTREGAS -->
-    <div class="card card-center">
-      <span class="card-text">HORARIOS Y ENVÍOS</span>
-      <span class="card-sub">Pedidos directos y entregas a domicilio</span>
+    <!-- HORARIO INTEGRADO COMO TEXTO (Sin botones) -->
+    <div class="schedule-block">
+      <p class="schedule-title">HORARIO DE ATENCIÓN</p>
+      <p class="schedule-hours">Lunes a Domingo · 14:00 - 22:00</p>
+      <p class="schedule-location">Plaza Alianza</p>
     </div>
 
-    <!-- BOTÓN PRINCIPAL DE WHATSAPP -->
-    <a class="card card-center card-whatsapp" href="https://wa.me/593999999999?text=Hola%20Davila's%20Donuts%2C%20quiero%20hacer%20un%20pedido" target="_blank">
-      <span class="card-text">CHATEA CON NOSOTROS</span>
+    <!-- BOTÓN PRINCIPAL DE WHATSAPP (Destacado) -->
+    <a class="card card-whatsapp" href="https://wa.me/593988241584?text=Hola%20Davila's%20Donuts%2C%20vengo%20de%20su%20tarjeta%20y%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer">
+       <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.694 6.306A12.913 12.913 0 0 0 16.002 2.7C9.094 2.7 3.494 8.3 3.494 15.208c0 2.286.597 4.512 1.733 6.473L2.7 29.3l7.852-2.062a12.965 12.965 0 0 0 6.179 1.571h.004c6.909 0 12.509-5.6 12.509-12.511a12.803 12.803 0 0 0-3.55-8.991m-9.692 20.196h-.003a10.734 10.734 0 0 1-5.476-1.497l-.393-.233-4.073 1.069 1.088-3.964-.256-.405a10.737 10.737 0 0 1-1.644-5.765c0-5.93 4.825-10.755 10.757-10.755 2.871 0 5.572 1.119 7.599 3.148a10.714 10.714 0 0 1 3.148 7.601c0 5.929-4.826 10.754-10.758 10.754m5.89-8.07c-.322-.161-1.907-.941-2.204-1.049-.297-.107-.514-.161-.731.161-.217.323-.839 1.05-1.028 1.267-.189.216-.377.24-.699.078-.322-.162-1.36-.501-2.592-1.602-.96-.856-1.608-1.913-1.796-2.235-.188-.322-.02-.497.14-.658.148-.149.323-.388.485-.581.162-.194.216-.322.297-.483.081-.162.04-.303-.02-.431-.061-.129-.54-1.301-.74-1.781-.194-.476-.395-.413-.54-.421-.139-.007-.297-.008-.455-.008a.877.877 0 0 0-.635.297c-.217.217-.828.807-.828 1.969 0 1.163.845 2.287.963 2.449.118.162 1.662 2.538 4.028 3.561.564.245 1.005.391 1.348.502.567.182 1.083.156 1.491.099.456-.065 1.907-.779 2.177-1.531.269-.752.269-1.396.188-1.531" fill="#fff"/></svg>
+      <span class="card-text">RECEPTAMOS TU PEDIDO</span>
     </a>
 
-    <!-- TU FIRMA -->
-    <a class="footer" href="https://www.instagram.com/" target="_blank">
-      Desarrollado por <span>EM Studio</span>
+    <!-- ENLACES A REDES SOCIALES Y UBICACIÓN (Diseño de rejilla) -->
+    <div class="social-location-grid">
+      <a class="card card-social" href="https://www.instagram.com/davilasdonuts/" target="_blank" rel="noopener noreferrer">
+        <img class="card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+        <span class="card-text">INSTAGRAM</span>
+      </a>
+      <a class="card card-social" href="https://www.facebook.com/davilasdonuts" target="_blank" rel="noopener noreferrer">
+        <img class="card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        <span class="card-text">FACEBOOK</span>
+      </a>
+    </div>
+    
+    <a class="card card-location" href="https://maps.app.goo.gl/tuLinkDeGoogleMapsAqui" target="_blank" rel="noopener noreferrer">
+        <img class="card-thumb" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png" alt="Ubicación">
+        <span class="card-text">CÓMO LLEGAR (Plaza Alianza)</span>
+    </a>
+
+    <!--FIRMA -->
+    <a class="footer" target="_blank">
+      Diseñado por <span>EM Studio</span>
     </a>
   </main>
 </body>
